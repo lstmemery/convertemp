@@ -11,6 +11,6 @@ Depends:
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
-Suggests: knitr,
+Suggests: knitr, testthat
     rmarkdown
 VignetteBuilder: knitr
