@@ -51,3 +51,58 @@ test_that('fahr_to celsius converts correctly', {
   expect_equal(kelvin_to_fahr(293.15), 68)
   expect_equal(kelvin_to_fahr(373.15), 212)
 })
+
+test_that('celsius_to_fahr does not go below zero', {
+  expect_error(celsius_to_fahr(-280))
+})
+
+test_that('celsius_to_kelvin does not go below zero', {
+  expect_error(celsius_to_kelvin(-280))
+})
+
+test_that('fahr_to_celsius does not go below zero', {
+  expect_error(fahr_to_celsius(-460))
+})
+
+test_that('fahr_to_kelvin does not go below zero', {
+  expect_error(fahr_to_kelvin(-460))
+})
+
+test_that('kelvin_to_celsius does not go below zero', {
+  expect_error(kelvin_to_celsius(-1))
+})
+
+test_that('kelvin_to_fahr does not go below zero', {
+  expect_error(kelvin_to_fahr(-1))
+})
+
+
+test_that('celsius_to_fahr must be a number', {
+  expect_error(celsius_to_fahr("cold"))
+  expect_error(celsius_to_fahr(c('h', 'o', 't')))
+})
+
+test_that('celsius_to_kelvin must be a number', {
+  expect_error(celsius_to_kelvin("cold"))
+  expect_error(celsius_to_kelvin(c('h', 'o', 't')))
+})
+
+test_that('fahr_to_celsius must be a number', {
+  expect_error(fahr_to_celsius("cold"))
+  expect_error(fahr_to_celsius(c('h', 'o', 't')))
+})
+
+test_that('fahr_to_kelvin must be a number', {
+  expect_error(fahr_to_kelvin("cold"))
+  expect_error(fahr_to_kelvin(c('h', 'o', 't')))
+})
+
+test_that('kelvin_to_celsius must be a number', {
+  expect_error(kelvin_to_celsius("cold"))
+  expect_error(kelvin_to_celsius(c('h', 'o', 't')))
+})
+
+test_that('kelvin_to_fahr must be a number', {
+  expect_error(kelvin_to_fahr("cold"))
+  expect_error(kelvin_to_fahr(c('h', 'o', 't')))
+})
